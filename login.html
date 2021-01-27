@@ -4,7 +4,70 @@
   <title>login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">  
+    <link rel="stylesheet" href="./css/bootstrap.min.css"> 
+    <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ $("#pwd").keyup(function(){
+  check_pass();
+ });
+});
+
+function check_pass()
+{
+ var val=document.getElementById("psw").value;
+ var meter=document.getElementById("meter");
+ var no=0;
+ if(val!="")
+ {
+  // If the password length is less than or equal to 6
+  if(val.length<=6)no=1;
+
+  // If the password length is greater than 6 and contain any lowercase alphabet or any number or any special character
+  if(val.length>6 && (val.match(/[a-z]/) || val.match(/\d+/) || val.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/)))no=2;
+
+  // If the password length is greater than 6 and contain alphabet,number,special character respectively
+  if(val.length>6 && ((val.match(/[a-z]/) && val.match(/\d+/)) || (val.match(/\d+/) && val.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/)) || (val.match(/[a-z]/) && val.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/))))no=3;
+
+  // If the password length is greater than 6 and must contain alphabets,numbers and special characters
+  if(val.length>6 && val.match(/[a-z]/) && val.match(/\d+/) && val.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/))no=4;
+
+  if(no==1)
+  {
+   $("#meter").animate({width:'50px'},300);
+   meter.style.backgroundColor="red";
+   document.getElementById("pass_type").innerHTML="Very Weak";
+  }
+
+  if(no==2)
+  {
+   $("#meter").animate({width:'100px'},300);
+   meter.style.backgroundColor="#F5BCA9";
+   document.getElementById("pass_type").innerHTML="Weak";
+  }
+
+  if(no==3)
+  {
+   $("#meter").animate({width:'150px'},300);
+   meter.style.backgroundColor="#FF8000";
+   document.getElementById("pass_type").innerHTML="Good";
+  }
+
+  if(no==4)
+  {
+   $("#meter").animate({width:'200px'},300);
+   meter.style.backgroundColor="#00FF40";
+   document.getElementById("pass_type").innerHTML="Strong";
+  }
+ }
+
+ else
+ {
+  meter.style.backgroundColor="white";
+  document.getElementById("pass_type").innerHTML="";
+ }
+}
+</script> 
 <style>
 /* Style all input fields */
 input {
@@ -71,6 +134,35 @@ input[type=submit] {
 .rock{
     margin-top: 20px;
 }
+/* new style */
+#pass
+{
+ margin-left:25%;
+ height:45px;
+ width:500px;
+ border-radius:3px;
+ border:1px solid grey;
+ padding:10px;
+ font-size:18px;
+}
+#meter_wrapper
+{
+ border:1px solid grey;
+ margin-left:38%;
+ margin-top:20px;
+ width:200px;
+ height:35px;
+ border-radius:3px;
+}
+#meter{
+ width:0px;
+ height:35px;
+ border-radius:
+}
+/* new style ends */
+
+
+
 
 </style>
 </head>
@@ -97,24 +189,20 @@ input[type=submit] {
     
     
 <div class="container">
-  <form action="index.html">
+  <form action="index.html" onsubmit=" return validate()">
     
    <label for="Email">Email</label>
     <input type="email" id="email" name="email" pattern="^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3}?)$" title="Must be in proper format" required> 
-    <div class="forest">
+    <div class="forest"  onsubmit="return check_pass()">
     <label for="psw">Password</label>
-    <input onkeyup="trigger()" type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    <div class="meter"></div>
+    <span id="pass_type"></span>
+    <br>
+    <br>
     <input type="submit" value="Submit">
     </div>
-    <div class="indicator">
-      <span class="weak"></span>
-      <span class="medium"></span>
-      <span class="strong"></span>
-    </div>
-<div class="nest">
-</div>
-  </form>
-</div>
+    
 <div id="message">
   <h3>Password must contain the following:</h3>
   <p id="letter" class="invalid">A <b>lowercase</b> letter</p>

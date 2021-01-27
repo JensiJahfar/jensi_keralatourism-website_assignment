@@ -3,11 +3,12 @@ var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
+var mail = document.getElementById("email");
 
-myInput.onkeyup = function() {
+function validate() {
   // Validate email
-  var email = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3}?)$/;
-  if(myInput.value.match(email.value)) {  
+  var regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3}?)$/;
+  if(regexp.test(email.value)) {  
     letter.classList.remove("invalid");
     letter.classList.add("valid");
   } else {
