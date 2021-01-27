@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body background="./images/creation.jpg">
+    <div class="button">
+        <ul class="nav justify-content-end bg-teal">
+          <li class="nav-item" >
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="district.html">District</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Signup.html">Sign up</a>
+          </li>
+        </ul>
+    <div class="logolength">
+        <img src="./images/download.png" alt="logo">
+    </div>
+    <!-- login -->
+    <form action="index.html" onclick="return validate()" class="details">
+        <p id="sweep">LOGIN</p>
+        <br>
+        <p> Please login with your credentials.<br>If you are not a member,Please <a href="Signup.html">Signup</a></p>
+        
+        <div class="details1">
+            <label for="email">Email</label >
+            <br>
+            <input type="text" placeholder="Somewhat.like@gmail.com" id="email" required>
+        <label for="error" id="error"></label>
+        <br>
+        <br>
+            <label for="pwd">Password</label>
+            <br>
+            <input type="password" placeholder="Enter your password" id="pwd" minlength="8" required>
+        <label for="signal" id="signal"></label>
+        <br>
+        <br>
+      </div>
+        
+        <div id="anchor">
+            <a href="#">Forgot password?</a>
+        </div>
+        <br>
+            <button id="click">Login</button>
+    </form>
+    <!--/ login -->
+    <script src="form.js"></script>
+</body>
+</html>

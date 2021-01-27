@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-size:cover;
+}
+.title{
+    background-color:teal;
+    height: 3em;
+}
+.logolength{
+    height: .5em;
+   padding: 12px;
+}
+.button{
+   padding-top: 2px;
+   padding-bottom: 2px;
+   color: teal;
+}
+.bg-teal{
+    background-color: teal;
+    color: teal;
+}
+.text{
+    font-size: 2em;
+}
+/* .cat{
+    background-color:skyblue;
+    height:2em;
+    font-size: 2em;
+    padding-top: 20px; */
+
+.mouse{
+    background-color:skyblue;
+    height:2em;
+    font-size: 2em;
+    padding-top: 20px;
+}
+.details{
+    /* border: 2px solid black; */
+    padding: 8px;
+    width: 20em;
+    margin-left: 40%;
+    margin-top: 1%;
+}
+.details1 input{
+    height: 1.5em;
+    width: 18em;
+}
+#click{
+    width: 18em;
+    height: 2em;
+    background-color: skyblue;
+    color: whitesmoke;
+    border: skyblue;
+}
+#click :hover{
+    color: darkblue;
+}
+#sweep{
+    padding-left:20%;
+    font-size: 35px;
+    color: black;
+}
+#form{
+    padding-left: 25%;
+}
+.container{
+    max-width: 100%;
+    /* margin: auto; */
+    /* padding-left: 25px; */
+    /* padding-right: 25px; */
+}
+.row{
+    display:flex;
+    height: 88%;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
+}
+.col{
+    flex-basis: 50%;
+}
+h1{
+    color: teal;
+    font-size: 100px;
+    padding-left: 10px;
+}
+p{
+    color: teal;
+    padding-left: 10px;
+}
+.column{
+    float: left;
+    width: 360px;
+    height: 140px;
+    background-image: none;
+    display: -ms-grid;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+     margin: 10px 15px;
+}
+.column:hover{
+transform: translateY(-10px);
+}
+h5{
+    text-shadow: 0 0 5px black;
+}
+#sing{
+    padding-left: 45%;
+}
+.bg-sleep{
+   background-color: teal;
+}
+.metre p{
+    color: black;
+    padding-left: 5px;
+}
+.metre a{
+    text-decoration: none;
+}
+.footer{
+    border: 2px solid teal;
+    background-color: teal;
+}
+.color-blur{
+    color: teal
+}
+#jack p{
+    color: white;
+    font-size: 30px;
+    padding-bottom: 200px;
+}
+#jack h5{
+    font-size: 50px;
+    position: relative;
+    animation: text 3s 1;
+    letter-spacing: 10px;
+}
+@keyframes text {
+0%{
+    color: white;
+    margin-bottom: -40px;
+}
+30%{
+    letter-spacing: 20px;
+    margin-bottom: -40px;
+}
+85%{
+letter-spacing: 10px;
+margin-bottom: -40px;
+}
+}
+.container a{
+    padding-left: 100px;
+}
+.nav-item a{
+    text-decoration: none;
+    color: white;
+}
+.nav-item px-3 a{
+    padding-left: 300px;
+}
+
+.star{
+    font-size: 40px;
+}

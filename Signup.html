@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body background="./images/creation.jpg">
+  <div class="button">
+    <ul class="nav justify-content-end bg-teal">
+      <li class="nav-item" >
+        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="district.html">District</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login.html">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Signup.html">Sign up</a>
+      </li>
+    </ul>
+    <div class="logolength">
+        <img src="./images/download.png" alt="logo">
+    </div>
+    <h4 id="sing">SIGN UP</h4>
+    <br>
+    <div id="form" class="col-lg-10">
+        <form name="myfrm" action="login.html" onsubmit="return validation()" class="row g-3" id="myform">
+            <div class="col-md-6">
+              <label for="First name" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="inputname" required>
+            </div>
+            <div class="col-md-6">
+              <label for="Last Name" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="inputname" required>
+            </div>
+            <div class="col-12">
+              <label for="inputemail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputemail" placeholder="somewhat.like@gmail.com" required>
+            </div>       
+            <div class="col-12">
+              <label for="Number" class="form-label">Number</label>
+              <input type="text" name="mobilenmbr" class="form-control" id="mobilenumber" placeholder="+91 999 234 4657" required>
+              <span id="messages2"></span>
+            </div>
+            <div class="col-md-12">
+              <label for="inputpassword" class="form-label">Enter password</label>
+              <input type="password" class="form-control" id="inputpassword" placeholder="Enter password" required>
+            </div>
+            
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit"  class="btn btn-primary">Sign in</button>
+            </div>
+          </form>
+    </div>
+    <script src="hall.js">
+   
+    </script>
+</body>
+</html>
